@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D2446"
+    android:title="Моё приложение 2"
+    android:titleTextColor="#FFFFFF"
+    android:textSize="20sp"
+    android:gravity="center"
+    tools:context=".MainActivity2" >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="262dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Horóscopo para Capricornio"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="262dp"
+        android:layout_height="670dp"
+        android:layout_marginTop="100dp"
+        android:text="Mañana será un día para enfocarte en tus metas y responsabilidades. Tu disciplina y perseverancia te ayudarán a superar cualquier obstáculo que se presente. Es un buen momento para planificar tus próximos pasos y organizar tus tareas. En el ámbito personal, presta atención a tus relaciones; una comunicación clara fortalecerá los lazos con quienes te rodean. Confía en tu intuición y mantén la calma ante los desafíos."
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="250dp"
+        android:layout_height="51dp"
+        android:text="Atrás"
+        android:background="#4CAF50"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="70dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
