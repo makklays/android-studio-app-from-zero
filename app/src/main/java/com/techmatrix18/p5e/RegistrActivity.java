@@ -1,11 +1,16 @@
 package com.techmatrix18.p5e;
 
+import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import java.io.BufferedReader;
@@ -14,6 +19,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Calendar;
 
 public class RegistrActivity extends AppCompatActivity {
 
@@ -26,13 +32,50 @@ public class RegistrActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registr);
 
         editTextUsername = findViewById(R.id.editTextUsername);
-        editTextGender = findViewById(R.id.editTextGender);
-        editTextAge = findViewById(R.id.editTextAge);
+        //editTextGender = findViewById(R.id.editTextGender);
+        //editTextAge = findViewById(R.id.editTextAge);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextMobile = findViewById(R.id.editTextMobile);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
         buttonRegistr = findViewById(R.id.buttonRegistr);
+
+        // Номер телефона
+        //editTextMobile.requestFocus();
+        //InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        //imm.showSoftInput(editTextMobile, InputMethodManager.SHOW_IMPLICIT);
+
+        // Дата рождения
+        EditText editTextBirthDate = findViewById(R.id.editTextBirthDate);
+        editTextBirthDate.setOnClickListener(v -> {
+            Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    this,
+                    android.R.style.Theme_Holo_Light_Dialog_NoActionBar, // стиль без календаря
+                    (view, selectedYear, selectedMonth, selectedDay) -> {
+                        String date = String.format("%02d.%02d.%d", selectedDay, selectedMonth + 1, selectedYear);
+                        editTextBirthDate.setText(date);
+                    },
+                    year, month, day
+            );
+            // Включить режим спиннеров
+            datePickerDialog.getDatePicker().setCalendarViewShown(false);
+            datePickerDialog.getDatePicker().setSpinnersShown(true);
+            datePickerDialog.show();
+        });
+
+        // Пол
+        Spinner genderSpinner = findViewById(R.id.genderSpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.gender_options,
+                R.layout.spinner_selected_item  // Файл с нужным цветом
+        );
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        genderSpinner.setAdapter(adapter);
 
         // registr
         buttonRegistr.setOnClickListener(v -> {

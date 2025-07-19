@@ -1,14 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Horoscopo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
+
+        <!-- Цвет фона всего приложения -->
+        <item name="android:windowBackground">#0D2446</item>
+
+        <!-- имя параметра темы (атрибут), который указывает основной цвет приложения -->
+        <!-- (обычно используется для шапки / Toolbar, кнопок, акцентов). -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
+
+        <!-- Цвет шапки (Toolbar) -->
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+
+        <!-- Цвет кнопок и других акцентных элементов -->
         <item name="colorSecondary">@color/teal_200</item>
+
         <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/purple_500</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

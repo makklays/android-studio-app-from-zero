@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Pacto 5 Estrellas</string>
+
+    <string-array name="gender_options">
+        <item>Выберите пол *</item>
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+
+
 </resources>
