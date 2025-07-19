@@ -3,14 +3,14 @@ package com.techmatrix18.p5e;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Toast;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.Toast;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
-import androidx.core.view.GravityCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity {
 
     private Intent intent;
     private DrawerLayout drawerLayout;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_map);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
@@ -33,25 +33,25 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.nav_home) {
                 Toast.makeText(this, "Главная", Toast.LENGTH_SHORT).show();
                 // переходим в Сообщения
-                intent = new Intent(MainActivity.this, MainActivity.class);
+                intent = new Intent(MapActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             } else if (id == R.id.nav_map) {
                 Toast.makeText(this, "Карта", Toast.LENGTH_SHORT).show();
                 // переходим в Сообщения
-                intent = new Intent(MainActivity.this, MapActivity.class);
+                intent = new Intent(MapActivity.this, MapActivity.class);
                 startActivity(intent);
                 finish();
             } else if (id == R.id.nav_messages) {
                 Toast.makeText(this, "Сообщения", Toast.LENGTH_SHORT).show();
                 // переходим в Сообщения
-                Intent intent = new Intent(MainActivity.this, MessagesActivity.class);
+                Intent intent = new Intent(MapActivity.this, MessagesActivity.class);
                 startActivity(intent);
                 finish();
             } else if (id == R.id.nav_taps) {
                 Toast.makeText(this, "Тапки", Toast.LENGTH_SHORT).show();
                 // переходим в Сообщения
-                Intent intent = new Intent(MainActivity.this, TapActivity.class);
+                Intent intent = new Intent(MapActivity.this, TapActivity.class);
                 startActivity(intent);
                 finish();
             /*} else if (id == R.id.nav_settings) {
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.remove("token");
                 editor.apply(); // или editor.commit();
 
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MapActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -74,4 +74,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-

@@ -7,5 +7,7 @@
         <item>Женский</item>
     </string-array>
 
+    <string name="navigation_drawer_open">Открыть меню</string>
+    <string name="navigation_drawer_close">Закрыть меню</string>
 
 </resources>
