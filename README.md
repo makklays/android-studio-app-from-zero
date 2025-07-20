@@ -9,7 +9,10 @@ en base de datos.
 Varios pantillas del proyecto bajo
 
 <p align="left">
-    <img src="./app/src/main/res/drawable/imgs/photo_2025-06-23_22-31-24.jpg" width="170" />
+    <img src="./app/src/main/res/drawable/imgs/login.png" width="170" />
+    <img src="./app/src/main/res/drawable/imgs/menu.png" width="170" />
+    <img src="./app/src/main/res/drawable/imgs/taps.png" width="170" />
+    <img src="./app/src/main/res/drawable/imgs/messages.png" width="170" />
 </p>
 
 ### En Postman
