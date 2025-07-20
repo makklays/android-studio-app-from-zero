@@ -11,6 +11,7 @@ Varios pantillas del proyecto bajo
 <p align="left">
     <img src="./app/src/main/res/drawable/imgs/login.png" width="170" />
     <img src="./app/src/main/res/drawable/imgs/menu.png" width="170" />
+    <img src="./app/src/main/res/drawable/imgs/first.png" width="170" />
     <img src="./app/src/main/res/drawable/imgs/taps.png" width="170" />
     <img src="./app/src/main/res/drawable/imgs/messages.png" width="170" />
 </p>
