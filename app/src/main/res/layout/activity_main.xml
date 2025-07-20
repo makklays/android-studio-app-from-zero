@@ -26,7 +26,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Добро пожаловать в мир 'Союз 5 звёзд'!"
+            android:text="¡Bienvenido al mundo de 'Pacto 5 estrellas'!"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:layout_marginTop="48dp"

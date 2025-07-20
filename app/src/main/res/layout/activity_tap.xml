@@ -6,33 +6,49 @@
     android:layout_height="match_parent">
 
     <!-- Основной контент -->
-    <LinearLayout
+    <!--LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#0D2446"
         android:padding="16dp"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/logo_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:id="@+id/fonImage"
+            android:layout_width="330dp"
+            android:layout_height="330dp"
             android:contentDescription="Pacto 5 Estrallas"
-            android:src="@drawable/logo"
-            android:layout_marginTop="48dp" />
+            android:src="@drawable/circule2"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="210dp" />
+
+        <ImageView
+            android:id="@+id/mainImage"
+            android:layout_width="330dp"
+            android:layout_height="330dp"
+            android:contentDescription="Pacto 5 Estrallas"
+            android:src="@drawable/alien"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="210dp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Тапки!"
+            android:text="0"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:layout_marginTop="48dp"
-            android:gravity="center"/>
+            android:textSize="20sp"
+            android:layout_below="@id/mainImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
 
-    </LinearLayout>
+    <!--/LinearLayout-->
+    </RelativeLayout>
 
     <!-- Боковое меню слева -->
     <com.google.android.material.navigation.NavigationView

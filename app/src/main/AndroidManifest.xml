@@ -28,7 +28,7 @@
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:name=".MessagesActivity"
+            android:name=".chat.MessagesActivity"
             android:exported="false" />
         <activity
             android:name=".MapActivity"

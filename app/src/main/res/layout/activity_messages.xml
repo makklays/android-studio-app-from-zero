@@ -6,33 +6,51 @@
     android:layout_height="match_parent">
 
     <!-- Основной контент -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#0D2446"
         android:padding="16dp"
+        android:background="@drawable/tiled_background"
         android:gravity="center_horizontal">
 
-        <ImageView
-            android:id="@+id/logo_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:contentDescription="Pacto 5 Estrallas"
-            android:src="@drawable/logo"
-            android:layout_marginTop="48dp" />
+        <!-- Список сообщений -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messagesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:layout_above="@+id/messageInputLayout"
+            android:clipToPadding="false" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+        <!-- Поле ввода -->
+        <LinearLayout
+            android:id="@+id/messageInputLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Твои сообщения"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:layout_marginTop="48dp"
-            android:gravity="center"/>
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            android:padding="8dp">
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/editMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Сообщение..."
+                android:background="@null"
+                android:textColor="#000" />
+
+            <ImageButton
+                android:id="@+id/buttonSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@android:drawable/ic_menu_send" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <!-- Боковое меню слева -->
     <com.google.android.material.navigation.NavigationView

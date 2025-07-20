@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
+import com.techmatrix18.p5e.chat.MessagesActivity;
+
 import androidx.core.view.GravityCompat;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,25 +33,25 @@ public class MainActivity extends AppCompatActivity {
             int id = item.getItemId();
 
             if (id == R.id.nav_home) {
-                Toast.makeText(this, "Главная", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
                 // переходим в Сообщения
                 intent = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             } else if (id == R.id.nav_map) {
-                Toast.makeText(this, "Карта", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
                 // переходим в Сообщения
                 intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
                 finish();
             } else if (id == R.id.nav_messages) {
-                Toast.makeText(this, "Сообщения", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
                 // переходим в Сообщения
                 Intent intent = new Intent(MainActivity.this, MessagesActivity.class);
                 startActivity(intent);
                 finish();
             } else if (id == R.id.nav_taps) {
-                Toast.makeText(this, "Тапки", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
                 // переходим в Сообщения
                 Intent intent = new Intent(MainActivity.this, TapActivity.class);
                 startActivity(intent);
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             /*} else if (id == R.id.nav_settings) {
                 Toast.makeText(this, "Настройки", Toast.LENGTH_SHORT).show();*/
             } else if (id == R.id.nav_logout) {
-                Toast.makeText(this, "Выход", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
 
                 SharedPreferences preferences = getSharedPreferences("Auth", MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
